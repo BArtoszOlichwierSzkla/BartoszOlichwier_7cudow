@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Cudów Techniki Polskiej Kolei</title>
+
+    <link rel="stylesheet" type="text/css" href="/src/style.css">
+</head>
+<body>
+    <header>
+        <svg class="sem-svg" width="210" height="280" xmlns="http://www.w3.org/2000/svg">
+            <image href="/img/sem.png" width="100%" height="100%"/>        
+            <circle class="k k1" cx="39.5%" cy="9.5%" r="3.8%" fill="#4da84d" mask="url(#sem-szklo)"/>
+            <circle class="k k2" cx="39%" cy="20%" r="3.9%" fill="orange"/>
+            <circle class="k k3" cx="39%" cy="30.5%" r="4.1%" fill="red"/>
+            <circle class="k k4" cx="38.6%" cy="41.5%" r="4.2%" fill="orange"/>
+            <circle class="k k5" cx="38.4%" cy="53%" r="4.2%" fill="white"/>
+        </svg>
+        <h1>7 Cudów PKP</h1>
+    </header>
+    <nav>
+        <div class="nav__div">
+        <input type="checkbox" class="nav__menubtn">
+        
+        <div class="nav__">
+        <a href="/">Strona główna</a>
+        <a href="/miejsca/">Ciekawe miejsca kolejowe</a>
+        <a href="/film/">Film i/lub muzyka</a>
+        <a href="/ankieta/">Ankieta</a>
+        </div>
+        </div>
+    </nav>
+    <content>
+        <section id="survey">
+            <h2>Ankieta</h2>
+            <form action="#" method="post">
+                <label for="name">Twoje imię:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+        
+                <label for="attraction">Który pociąg najbardziej Ci się podoba?</label>
+                <select id="attraction" name="attraction" required>
+                    <option value="eu07">eu07</option>
+                    <option value="en57">en57</option>
+                    <option value="ew58">ew58</option>
+                    <option value="et22">et22</option>
+                    <option value="ep09">ep09</option>
+                    <option value="sm42">sm42</option>
+                    <option value="st44">st44</option>
+                </select>
+                <br><br>
+        
+                <label>Jak oceniasz historię EW58?</label><br>
+                <input type="radio" id="excellent" name="rating" value="excellent" required>
+                <label for="excellent">Doskonale</label><br>
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Dobrze</label><br>
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="average">Przeciętnie</label><br>
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Słabo</label><br>
+                <input type="radio" id="tragedy" name="rating" value="tragedy">
+                <label for="tragedy">Tragicznie</label>
+                <br><br>
+        
+                <label for="comments">Tutaj wpisz szczegółową opinię o lokomotywie ST44</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                <br><br>
+        
+                <input type="checkbox" id="wouldRide" name="wouldRide">
+                <label for="wouldRide">Czy chętnie przejechał(a)byś się EN57?</label>
+                <br><br>
+        
+                <input type="checkbox" id="hasSeen" name="hasSeen">
+                <label for="hasSeen">Czy widziałeś(aś) kiedyś byka (ET22) w malowaniu "żółte czoło"?</label>
+                <br><br>
+        
+                <button type="submit">Wyślij</button>
+                <button type="reset">Wyczyść</button>
+            </form>
+        </section>
+    </content>
+    <footer>
+        <span>Bartosz Olichwier 2tc/2, 11.01.2024</span>
+    </footer>
+</body>
+</html>

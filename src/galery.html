@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+    <style>
+        body, html{
+            width:100%; height:100%;
+            border-radius: 20px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        img{
+            width:100%; height:100%;
+            object-fit: cover;
+        }
+        p {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="" alt="">
+    <p>źródło: ilostan.forumkolejowe.pl</p>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const galeryID=  urlParams.get('id');
+        const quantity=  urlParams.get('q');
+        const image = document.querySelector('#image');
+        const path = `/img/tabor/${galeryID}/`
+        image.alt = `pojazd ${galeryID}`
+        image.src = `${path}foto0.jpg`;
+
+        let current = 0;
+
+        console.log(quantity)
+        function next() {
+
+            if(current >= quantity) current = 0;
+            else current++;
+            console.log("NEXT", current)
+            image.src = `${path}foto${current}.jpg`;
+        }
+
+        const intervalID = setInterval(() => next(), 2000);
+    </script>
+</body>
+</html>
