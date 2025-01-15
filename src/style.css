@@ -238,6 +238,7 @@ input, textarea, select, form button {
     transition: all 0.2s;
     font: inherit;
     color: var(--l);
+    max-width: 90%;
 }
 form{
     background-color: var(--mp);
